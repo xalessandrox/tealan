@@ -1,0 +1,7 @@
+2023-11-17T23:11:35.630+01:00  INFO 6972 --- [main] com.sandro.tealan.TealanApplication      : Starting TealanApplication using Java 21.0.1 with PID 6972 (H:\Users\formi\intellij-workspace\tealan\target\classes started by Alex in H:\Users\formi\intellij-workspace\tealan)
+2023-11-17T23:11:35.632+01:00  INFO 6972 --- [main] com.sandro.tealan.TealanApplication      : No active profile set, falling back to 1 default profile: "default"
+2023-11-17T23:11:38.057+01:00  WARN 6972 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-11-17T23:11:38.058+01:00  WARN 6972 --- [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Tabelle »students« existiert nicht, wird übersprungen
+2023-11-17T23:11:38.597+01:00  INFO 6972 --- [main] com.sandro.tealan.TealanApplication      : Started TealanApplication in 3.376 seconds (process running for 3.982)
+2023-11-17T23:11:48.642+01:00  INFO 6972 --- [http-nio-80-exec-1] c.s.t.s.i.StudentServiceImpl             : Creating student Student(id=null, firstName=Mike, lastName=Baldwin, email=null, level=A1, phone=019/2637428, subjects=[ENGLISH, ITALIAN], balance=12, createdAt=2023-11-17T23:11:48.636561700)
+2023-11-17T23:11:48.703+01:00  INFO 6972 --- [http-nio-80-exec-1] c.s.t.controllers.StudentController      : Creating student Student(id=1, firstName=Mike, lastName=Baldwin, email=null, level=A1, phone=019/2637428, subjects=[ENGLISH, ITALIAN], balance=12, createdAt=2023-11-17T23:11:48.636561700)

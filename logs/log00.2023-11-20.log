@@ -1,0 +1,163 @@
+2023-11-20 18:12:52,681 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2023-11-20 18:12:52,740 INFO o.s.b.StartupInfoLogger [main] Starting TealanApplication using Java 21.0.1 with PID 6132 (H:\Users\formi\intellij-workspace\tealan\target\classes started by Alex in H:\Users\formi\intellij-workspace\tealan)
+2023-11-20 18:12:52,741 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-11-20 18:12:53,830 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-20 18:12:53,922 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 81 ms. Found 2 JPA repository interfaces.
+2023-11-20 18:12:54,704 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-11-20 18:12:54,715 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-11-20 18:12:54,718 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-11-20 18:12:54,718 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-20 18:12:54,876 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-11-20 18:12:54,878 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2050 ms
+2023-11-20 18:12:55,136 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-20 18:12:55,215 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-11-20 18:12:55,219 INFO o.h.c.Environment [main] HHH000406: Using bytecode reflection optimizer
+2023-11-20 18:12:55,651 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-20 18:12:55,689 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-11-20 18:12:55,880 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5c33008f
+2023-11-20 18:12:55,882 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-11-20 18:12:57,483 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-20 18:12:57,652 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-20 18:12:58,600 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-11-20 18:12:58,627 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-20 18:12:58,638 INFO o.s.b.StartupInfoLogger [main] Started TealanApplication in 6.715 seconds (process running for 7.688)
+2023-11-20 18:13:24,832 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-20 18:13:24,832 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-11-20 18:13:24,834 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2023-11-20 18:13:25,003 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-1] Creating student Student(id=null, firstName=Mike, lastName=Baldwin, email=null, phone=019/2637428, subjects=[ENGLISH, ITALIAN], balance=12, status=null, level=A1, createdAt=2023-11-20T18:13:24.994102100)
+2023-11-20 18:13:25,100 INFO c.s.t.c.StudentController [http-nio-8080-exec-1] Creating student Student(id=4, firstName=Mike, lastName=Baldwin, email=null, phone=019/2637428, subjects=[ENGLISH, ITALIAN], balance=12, status=null, level=A1, createdAt=2023-11-20T18:13:24.994102100)
+2023-11-20 18:13:35,415 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-3] Retrieving students
+2023-11-20 18:13:45,319 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-4] Retrieving students
+2023-11-20 18:22:21,933 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-8] Retrieving students
+2023-11-20 18:22:29,203 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-9] Retrieving students
+2023-11-20 18:22:36,969 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-10] Retrieving students
+2023-11-20 18:23:20,712 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-1] Retrieving students
+2023-11-20 18:23:32,585 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-3] Retrieving students
+2023-11-20 18:24:47,455 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-2] Retrieving students
+2023-11-20 18:27:04,205 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-7] Retrieving students
+2023-11-20 18:51:05,305 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-8] Retrieving students
+2023-11-20 18:51:14,961 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-9] Retrieving students
+2023-11-20 18:51:15,918 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-10] Retrieving students
+2023-11-20 18:51:24,884 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-1] Retrieving students
+2023-11-20 18:51:26,876 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-3] Retrieving students
+2023-11-20 18:51:50,364 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-4] Retrieving students
+2023-11-20 18:52:04,087 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-2] Retrieving students
+2023-11-20 18:52:10,424 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-6] Retrieving students
+2023-11-20 18:52:27,006 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-7] Retrieving students
+2023-11-20 18:52:28,846 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-5] Retrieving students
+2023-11-20 18:52:34,643 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-8] Retrieving students
+2023-11-20 18:52:44,031 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-9] Retrieving students
+2023-11-20 18:52:47,178 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-10] Retrieving students
+2023-11-20 18:52:53,011 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-1] Retrieving students
+2023-11-20 18:52:55,180 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-3] Retrieving students
+2023-11-20 18:53:33,382 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-4] Retrieving students
+2023-11-20 18:53:40,904 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-2] Retrieving students
+2023-11-20 18:54:03,294 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-6] Retrieving students
+2023-11-20 18:54:06,922 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-7] Retrieving students
+2023-11-20 18:54:21,450 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-5] Retrieving students
+2023-11-20 18:54:29,591 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-8] Retrieving students
+2023-11-20 18:54:31,676 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-9] Retrieving students
+2023-11-20 18:54:33,623 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-10] Retrieving students
+2023-11-20 18:54:35,642 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-1] Retrieving students
+2023-11-20 18:54:37,637 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-3] Retrieving students
+2023-11-20 18:54:41,600 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-4] Retrieving students
+2023-11-20 18:54:43,561 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-2] Retrieving students
+2023-11-20 18:54:45,518 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-6] Retrieving students
+2023-11-20 18:55:15,716 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-7] Retrieving students
+2023-11-20 18:55:18,214 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-5] Retrieving students
+2023-11-20 18:55:27,771 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-8] Retrieving students
+2023-11-20 18:55:29,749 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-9] Retrieving students
+2023-11-20 18:59:06,520 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-1] Retrieving students
+2023-11-20 19:02:17,105 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-4] Retrieving students
+2023-11-20 19:04:47,836 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-6] Retrieving students
+2023-11-20 19:05:38,544 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-7] Retrieving students
+2023-11-20 19:08:52,684 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-8] Retrieving students
+2023-11-20 19:09:18,470 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-9] Retrieving students
+2023-11-20 19:09:27,266 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-10] Retrieving students
+2023-11-20 19:10:48,824 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-3] Retrieving students
+2023-11-20 19:11:23,813 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-4] Retrieving students
+2023-11-20 19:12:59,324 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-6] Retrieving students
+2023-11-20 19:14:13,531 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-5] Retrieving students
+2023-11-20 19:15:09,712 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-10] Retrieving students
+2023-11-20 19:15:45,755 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-3] Retrieving students
+2023-11-20 19:16:00,827 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-2] Retrieving students
+2023-11-20 19:16:06,686 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-7] Retrieving students
+2023-11-20 19:16:35,785 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-8] Retrieving students
+2023-11-20 19:16:47,895 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-10] Retrieving students
+2023-11-20 19:17:12,281 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-3] Retrieving students
+2023-11-20 19:18:31,412 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-6] Retrieving students
+2023-11-20 19:18:32,951 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-5] Retrieving students
+2023-11-20 19:18:38,864 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-9] Retrieving students
+2023-11-20 19:18:46,668 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-1] Retrieving students
+2023-11-20 19:18:48,928 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-4] Retrieving students
+2023-11-20 19:18:53,697 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-6] Retrieving students
+2023-11-20 19:18:58,927 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-5] Retrieving students
+2023-11-20 19:19:02,735 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-9] Retrieving students
+2023-11-20 19:19:12,788 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-1] Retrieving students
+2023-11-20 19:19:31,666 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-4] Retrieving students
+2023-11-20 19:19:38,728 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-6] Retrieving students
+2023-11-20 19:19:43,964 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-5] Retrieving students
+2023-11-20 19:23:06,552 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-10] Retrieving students
+2023-11-20 19:23:53,535 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-1] Retrieving students
+2023-11-20 19:24:09,879 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-3] Retrieving students
+2023-11-20 19:24:21,323 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-4] Retrieving students
+2023-11-20 19:24:42,145 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-2] Retrieving students
+2023-11-20 19:25:01,917 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-6] Retrieving students
+2023-11-20 19:25:06,077 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-7] Retrieving students
+2023-11-20 19:27:55,711 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-8] Retrieving students
+2023-11-20 19:28:01,945 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-9] Retrieving students
+2023-11-20 19:29:21,962 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-1] Retrieving students
+2023-11-20 19:29:22,751 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-3] Retrieving students
+2023-11-20 19:31:35,727 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-2] Retrieving students
+2023-11-20 19:43:42,224 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-7] Retrieving students
+2023-11-20 19:45:40,808 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-8] Retrieving students
+2023-11-20 19:47:45,211 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-10] Retrieving students
+2023-11-20 19:50:58,472 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-3] Retrieving students
+2023-11-20 19:52:24,807 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-2] Retrieving students
+2023-11-20 19:52:32,099 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-6] Retrieving students
+2023-11-20 19:54:39,662 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-5] Retrieving students
+2023-11-20 19:55:16,870 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-8] Retrieving students
+2023-11-20 19:55:33,805 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-9] Retrieving students
+2023-11-20 19:56:04,892 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-10] Retrieving students
+2023-11-20 19:57:24,102 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-3] Retrieving students
+2023-11-20 19:57:27,619 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-4] Retrieving students
+2023-11-20 20:00:30,006 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-6] Retrieving students
+2023-11-20 20:01:26,645 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-7] Retrieving students
+2023-11-20 20:02:24,741 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-5] Retrieving students
+2023-11-20 20:07:13,811 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-9] Retrieving students
+2023-11-20 20:07:25,104 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-10] Retrieving students
+2023-11-20 20:08:05,506 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-3] Retrieving students
+2023-11-20 20:12:08,786 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-2] Retrieving students
+2023-11-20 20:13:35,173 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-11-20 20:13:35,177 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-11-20 20:13:35,183 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
+2023-11-20 20:13:48,273 INFO o.h.v.i.u.Version [background-preinit] HV000001: Hibernate Validator 8.0.1.Final
+2023-11-20 20:13:48,319 INFO o.s.b.StartupInfoLogger [main] Starting TealanApplication using Java 21.0.1 with PID 12748 (H:\Users\formi\intellij-workspace\tealan\target\classes started by Alex in H:\Users\formi\intellij-workspace\tealan)
+2023-11-20 20:13:48,320 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-11-20 20:13:49,220 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-11-20 20:13:49,305 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 74 ms. Found 2 JPA repository interfaces.
+2023-11-20 20:13:50,052 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-11-20 20:13:50,064 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-11-20 20:13:50,067 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2023-11-20 20:13:50,068 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-20 20:13:50,231 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-11-20 20:13:50,231 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1848 ms
+2023-11-20 20:13:50,477 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-11-20 20:13:50,553 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.2.13.Final
+2023-11-20 20:13:50,557 INFO o.h.c.Environment [main] HHH000406: Using bytecode reflection optimizer
+2023-11-20 20:13:50,961 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-11-20 20:13:50,999 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-11-20 20:13:51,163 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@48cf8414
+2023-11-20 20:13:51,166 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-11-20 20:13:52,849 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2023-11-20 20:13:52,956 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-11-20 20:13:53,928 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-11-20 20:13:53,989 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-11-20 20:13:54,008 INFO o.s.b.StartupInfoLogger [main] Started TealanApplication in 6.5 seconds (process running for 8.171)
+2023-11-20 20:14:14,884 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-20 20:14:14,884 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2023-11-20 20:14:14,887 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 1 ms
+2023-11-20 20:14:15,055 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-2] Creating student Student(id=null, firstName=Mike, lastName=Baldwin, email=null, phone=019/2637428, languages=[ENGLISH, ITALIAN], balance=12, status=null, level=A1, createdAt=2023-11-20T20:14:15.047163400)
+2023-11-20 20:14:15,178 INFO c.s.t.c.StudentController [http-nio-8080-exec-2] Creating student Student(id=1, firstName=Mike, lastName=Baldwin, email=null, phone=019/2637428, languages=[ENGLISH, ITALIAN], balance=12, status=null, level=A1, createdAt=2023-11-20T20:14:15.047163400)
+2023-11-20 20:14:41,535 INFO c.s.t.s.i.StudentServiceImpl [http-nio-8080-exec-1] Retrieving students
+2023-11-20 20:36:21,534 WARN c.z.h.p.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20m30s215ms169µs300ns).
