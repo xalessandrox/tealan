@@ -1,0 +1,46 @@
+### create student
+POST http://localhost:8080/students
+Content-Type: application/json
+
+{
+  "firstName": "Mike",
+  "lastName": "Baldwin",
+  "level": "A1",
+  "phone": "019/2637428",
+  "languages": ["ENGLISH"],
+  "balance": 12
+}
+
+### create another student
+POST http://localhost:8080/students
+Content-Type: application/json
+
+{
+  "firstName": "Julia",
+  "lastName": "Roberts",
+  "level": "A1",
+  "phone": "019/2637428",
+  "languages": ["GERMAN"],
+  "balance": 12
+}
+
+### get ALL students
+GET http://localhost:8080/students/getAll
+
+### create lesson
+POST http://localhost:8080/lessons
+Content-Type: application/json
+
+{
+  "startsAt": "2023-11-18T00:05:00.0000000",
+  "finishesAt": "2023-11-18T00:45:00.0000000",
+  "duration": 40,
+  "students": [{
+    "id": 1
+  }]
+,
+  "subject": "ENGLISH"
+}
+
+### get ALL lessons
+GET http://localhost:8080/lessons/getAll
