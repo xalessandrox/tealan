@@ -35,7 +35,7 @@ public class Student {
     private List<Language> languages;
     @Transient
     private List<LanguageResource> languageResources;
-    @ManyToMany(fetch = FetchType.EAGER, targetEntity = Lesson.class)
+    @ManyToMany(fetch = FetchType.EAGER, targetEntity = Lesson.class, mappedBy = "students")
     @JsonIgnoreProperties({"students"})
     private List<Lesson> lessons;
     private int balance;

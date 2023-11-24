@@ -31,6 +31,10 @@ public class Lesson {
     private Date finishesAt;
     private int duration;
     @ManyToMany(fetch = FetchType.EAGER, targetEntity = Student.class)
+    @JoinTable(
+            name = "lessons_students",
+            joinColumns = @JoinColumn(name = "student_id"),
+            inverseJoinColumns = @JoinColumn(name = "id"))
     @JsonIgnoreProperties({"lessons"})
     private List<Student> students;
     @Transient
