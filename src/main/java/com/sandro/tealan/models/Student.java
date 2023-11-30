@@ -9,8 +9,8 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import java.time.LocalDateTime;
-import java.util.List;
+import java.time.LocalDate;
+import java.util.Set;
 
 /**
  * @author Alessandro Formica
@@ -32,16 +32,19 @@ public class Student {
     private String lastName;
     private String email;
     private String phone;
-    private List<Language> languages;
-    @Transient
-    private List<LanguageResource> languageResources;
-    @ManyToMany(fetch = FetchType.EAGER, targetEntity = Lesson.class, mappedBy = "students")
-    @JsonIgnoreProperties({"students"})
-    private List<Lesson> lessons;
     private int balance;
     private Status status;
     private Level level;
-    private LocalDateTime createdAt = LocalDateTime.now();
+    private LocalDate createdAt = LocalDate.now();
+
+    private Set<Language> languages;
+    @Transient
+    private Set<LanguageResource> languageResources;
+
+    @JsonIgnoreProperties({"students"})
+    @ManyToMany(fetch = FetchType.EAGER, targetEntity = Lesson.class, mappedBy = "students")
+    private Set<Lesson> lessons;
+
 
     @Override
     public boolean equals(Object o) {

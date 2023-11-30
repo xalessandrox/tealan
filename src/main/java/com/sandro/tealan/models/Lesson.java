@@ -7,6 +7,7 @@ import lombok.Setter;
 import lombok.ToString;
 import org.springframework.data.annotation.CreatedDate;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -17,7 +18,7 @@ import java.util.List;
  */
 
 @Entity
-@Table(name= "lessons")
+@Table(name = "lessons")
 @Getter
 @Setter
 @ToString(exclude = "students")
@@ -26,10 +27,11 @@ public class Lesson {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     @CreatedDate
-    private Date createdAt;
+    private LocalDate createdAt = LocalDate.now();
     private Date startsAt;
     private Date finishesAt;
     private int duration;
+
     @ManyToMany(fetch = FetchType.EAGER, targetEntity = Student.class)
     @JoinTable(
             name = "lessons_students",
@@ -37,6 +39,7 @@ public class Lesson {
             inverseJoinColumns = @JoinColumn(name = "id"))
     @JsonIgnoreProperties({"lessons"})
     private List<Student> students;
+
     @Transient
     private LanguageResource language;
 
