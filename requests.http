@@ -5,9 +5,9 @@ Content-Type: application/json
 {
   "firstName": "Mike",
   "lastName": "Baldwin",
-  "level": "A1",
   "phone": "019/2637428",
-  "languages": ["ENGLISH"],
+  "languages":
+    "ENGLISH",
   "balance": 12
 }
 
@@ -20,12 +20,28 @@ Content-Type: application/json
   "lastName": "Roberts",
   "level": "A1",
   "phone": "019/2637428",
-  "languages": ["GERMAN"],
+  "languageLevel": [
+    {
+      "language": "ENGLISH",
+      "level": "A1"
+    },
+    {
+      "language": "GERMAN",
+      "level": "B1"
+    },
+    {
+      "language": "ITALIAN",
+      "level": "C2"
+    }
+  ],
   "balance": 12
 }
 
 ### get ALL students
 GET http://localhost:8080/students/getAll
+
+### get student detail
+GET http://localhost:8080/students/1
 
 ### create lesson
 POST http://localhost:8080/lessons

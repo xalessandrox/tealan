@@ -47,7 +47,7 @@ public class StudentController {
     }
 
     @GetMapping("/getAll")
-    public ResponseEntity<HttpResponse> getAllStudents(@RequestParam Optional<Integer> pageNumber, @RequestParam Optional<Integer> size) {
+    public ResponseEntity<HttpResponse> retrieveAllStudents(@RequestParam Optional<Integer> pageNumber, @RequestParam Optional<Integer> size) {
         return ResponseEntity
                 .ok()
                 .body(
@@ -61,5 +61,22 @@ public class StudentController {
                                 ))
                                 .build());
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<HttpResponse> getStudentDetail(@PathVariable("id") Long id) {
+        return ResponseEntity
+                .ok()
+                .body(
+                        HttpResponse.builder()
+                                .timeStamp(LocalDateTime.now().toString())
+                                .message("Retrieved student detail")
+                                .httpStatus(HttpStatus.OK)
+                                .statusCode(HttpStatus.OK.value())
+                                .data(Map.of(
+                                        "student", studentService.getStudentDetail(id)
+                                ))
+                                .build());
+    }
+
 
 }
