@@ -11,9 +11,9 @@ import lombok.Getter;
 @Getter
 public enum Language {
 
-    ENGLISH("English", "src/main/resources/static/flags/gb-eng.png"),
-    GERMAN("German", "src/main/resources/static/flags/de.png"),
-    ITALIAN("Italian", "src/main/resources/static/flags/it.png")
+    ENGLISH("English", "assets/flags/gb-eng.png"),
+    GERMAN("German", "assets/flags/de.png"),
+    ITALIAN("Italian", "assets/flags/it.png")
     ;
 
     private final String value;

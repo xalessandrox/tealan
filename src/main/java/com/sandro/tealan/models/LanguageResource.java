@@ -1,6 +1,7 @@
 package com.sandro.tealan.models;
 
 import com.sandro.tealan.enums.Language;
+import com.sandro.tealan.enums.Level;
 import lombok.Getter;
 
 
@@ -15,12 +16,11 @@ public final class LanguageResource {
 
     private final String name;
     private final String description;
-    private final String url;
-    public LanguageResource(String languageAsString) {
-        Language language = Language.valueOf(languageAsString);
+    private final String flagUrl;
+    public LanguageResource(Language language) {
         this.name = language.name();
         this.description = language.getValue();
-        this.url = language.getFlagUrl();
+        this.flagUrl = language.getFlagUrl();
     }
 
 }

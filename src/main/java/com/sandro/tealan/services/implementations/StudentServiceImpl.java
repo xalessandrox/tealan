@@ -1,6 +1,7 @@
 package com.sandro.tealan.services.implementations;
 
 import com.sandro.tealan.models.Student;
+import com.sandro.tealan.repositories.JpaStudentLanguageLevelRepository;
 import com.sandro.tealan.repositories.JpaStudentRepository;
 import com.sandro.tealan.services.LanguageService;
 import com.sandro.tealan.services.StudentService;
@@ -10,6 +11,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -24,13 +26,14 @@ import java.util.List;
 public class StudentServiceImpl implements StudentService {
 
     private final JpaStudentRepository jpaStudentRepository;
+    private JpaStudentLanguageLevelRepository jpaStudentLanguageLevelRepository;
     private final LanguageService languageService;
 
     @Override
     public Student saveStudent(Student student) {
         log.info("Creating student {}", student);
+        student.setCreatedAt(LocalDate.now());
         languageService.mapLanguageEnum(student);
-//        Student studentToPersist = jpaStudentRepository.save(student);
         return jpaStudentRepository.save(student);
     }
 
@@ -39,7 +42,12 @@ public class StudentServiceImpl implements StudentService {
         log.info("Retrieving students");
         Page<Student> pageStudent = jpaStudentRepository.findAll(PageRequest.of(pageNumber, size));
         List<Student> students = pageStudent.getContent();
-        languageService.mapLanguageEnum(students.toArray(Student[]::new));
+//        languageService.mapLanguageEnum(students.toArray(Student[]::new));
         return pageStudent;
+    }
+
+    @Override
+    public Student getStudentDetail(Long studentId) {
+        return jpaStudentRepository.findById(studentId).orElseThrow();
     }
 }

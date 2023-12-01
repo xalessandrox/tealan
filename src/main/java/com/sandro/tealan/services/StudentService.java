@@ -15,4 +15,6 @@ public interface StudentService {
     Student saveStudent(Student student);
     Page<Student> getAllStudents(int page, int size);
 
+    Student getStudentDetail(Long studentId);
+
 }

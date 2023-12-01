@@ -1,13 +1,10 @@
 package com.sandro.tealan.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.sandro.tealan.enums.Language;
-import com.sandro.tealan.enums.Level;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.sandro.tealan.enums.Status;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.util.Set;
@@ -23,6 +20,9 @@ import java.util.Set;
 @Setter
 @ToString(exclude = "lessons")
 @Table(name = "students")
+@AllArgsConstructor
+@NoArgsConstructor
+@JsonInclude(JsonInclude.Include.NON_DEFAULT)
 public class Student {
 
     @Id
@@ -34,17 +34,17 @@ public class Student {
     private String phone;
     private int balance;
     private Status status;
-    private Level level;
-    private LocalDate createdAt = LocalDate.now();
+    private LocalDate createdAt;
 
-    private Set<Language> languages;
+    @OneToMany(mappedBy = "student", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private Set<StudentLanguageLevel> languageLevel;
+
     @Transient
     private Set<LanguageResource> languageResources;
 
     @JsonIgnoreProperties({"students"})
     @ManyToMany(fetch = FetchType.EAGER, targetEntity = Lesson.class, mappedBy = "students")
     private Set<Lesson> lessons;
-
 
     @Override
     public boolean equals(Object o) {
