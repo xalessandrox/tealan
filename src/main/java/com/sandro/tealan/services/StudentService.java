@@ -17,4 +17,5 @@ public interface StudentService {
 
     Student getStudentDetail(Long studentId);
 
+    Student updateStudent(Student student);
 }

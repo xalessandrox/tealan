@@ -31,7 +31,6 @@ public class StudentController {
     @PostMapping
     public ResponseEntity<HttpResponse> createStudent(@RequestBody Student student) {
         Student studentPersist = studentService.saveStudent(student);
-        log.info("Creating student {}", studentPersist);
         return ResponseEntity
                 .created(URI.create(""))
                 .body(
@@ -78,5 +77,20 @@ public class StudentController {
                                 .build());
     }
 
+    @PutMapping("/update")
+    public ResponseEntity<HttpResponse> updateStudentDetails(@RequestBody Student student) {
+        return ResponseEntity
+                .ok()
+                .body(
+                        HttpResponse.builder()
+                                .timeStamp(LocalDateTime.now().toString())
+                                .message("Updated student details")
+                                .httpStatus(HttpStatus.OK)
+                                .statusCode(HttpStatus.OK.value())
+                                .data(Map.of(
+                                        "student", studentService.updateStudent(student)
+                                ))
+                                .build());
+    }
 
 }

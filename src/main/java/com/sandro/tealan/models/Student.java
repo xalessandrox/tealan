@@ -4,9 +4,13 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.sandro.tealan.enums.Status;
 import jakarta.persistence.*;
+import jakarta.transaction.Transactional;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDate;
+import java.util.Collection;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -15,18 +19,20 @@ import java.util.Set;
  * @since 15.11.2023
  */
 
-@Entity
+@Entity(name = "students")
 @Getter
 @Setter
+@SuperBuilder
 @ToString(exclude = "lessons")
-@Table(name = "students")
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_DEFAULT)
+@Transactional
 public class Student {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "students_seq")
+    @SequenceGenerator(name = "students_seq", sequenceName = "members_students", allocationSize = 1)
     private Long id;
     private String firstName;
     private String lastName;
@@ -36,8 +42,8 @@ public class Student {
     private Status status;
     private LocalDate createdAt;
 
-    @OneToMany(mappedBy = "student", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private Set<StudentLanguageLevel> languageLevel;
+    @OneToMany(mappedBy = "student", fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
+    private List<StudentLanguageLevel> languageLevel;
 
     @Transient
     private Set<LanguageResource> languageResources;

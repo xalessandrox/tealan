@@ -16,8 +16,8 @@ POST http://localhost:8080/students
 Content-Type: application/json
 
 {
-  "firstName": "Julia",
-  "lastName": "Roberts",
+  "firstName": "Michelle",
+  "lastName": "Williams",
   "level": "A1",
   "phone": "019/2637428",
   "languageLevel": [

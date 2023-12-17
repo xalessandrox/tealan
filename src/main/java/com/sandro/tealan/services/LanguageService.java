@@ -13,4 +13,6 @@ public interface LanguageService {
 
     void mapLanguageEnum(Student... students);
 
+    void sortLanguageLevel(Student... students);
+
 }

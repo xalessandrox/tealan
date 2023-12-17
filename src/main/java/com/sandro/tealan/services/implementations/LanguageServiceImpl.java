@@ -9,6 +9,8 @@ import com.sandro.tealan.services.LanguageService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -28,14 +30,24 @@ public class LanguageServiceImpl implements LanguageService {
     @Override
     public void mapLanguageEnum(Student... students) {
         for (Student student : students) {
+            jpaStudentRepository.save(student);
+            System.out.println("and the student is : " + student);
             Set<LanguageResource> languageResources = new HashSet<>();
             for (StudentLanguageLevel languageLevel : student.getLanguageLevel()) {
                 languageResources.add(new LanguageResource(languageLevel.getLanguage()));
-                jpaStudentRepository.save(student);
                 languageLevel.setStudent(student);
                 jpaStudentLanguageLevelRepository.save(languageLevel);
             }
             student.setLanguageResources(languageResources);
         }
     }
+
+    @Override
+    public void sortLanguageLevel(Student... students) {
+        Arrays.stream(students).forEach(student -> {
+            Collections.sort(student.getLanguageLevel());
+        });
+    }
+
+
 }
